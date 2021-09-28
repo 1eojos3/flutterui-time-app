@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
@@ -8,10 +9,23 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('Loading'),
-    );
+   void getData() async {
+
+
   }
-}
+
+
+  @override
+  void initState() {
+    super.initState();
+    print('init statefunction run');
+    getData();
+  }
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Text('Loading'),
+      );
+    }
+  }
+
